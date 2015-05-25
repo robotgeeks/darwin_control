@@ -1,0 +1,6 @@
+<launch>
+  <!-- start turtlesim and remap /turtlesim/cmd_vel to /darwin/cmd_vel-->
+  <node name="darwin_teleop" pkg="darwin_control" type="teleop_twist_keyboard.py" output="screen">
+    <remap from="cmd_vel" to="/darwin/cmd_vel" />
+  </node>
+</launch>
